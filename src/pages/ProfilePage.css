@@ -1,0 +1,54 @@
+.profile-page {
+  background: #f7f8fb;
+  min-height: 100%;
+  padding: 24px 0 48px;
+}
+
+.profile-header {
+  margin-bottom: 18px;
+}
+
+.profile-breadcrumb {
+  color: #777f90;
+  font-size: 0.86rem;
+}
+
+.profile-header h1 {
+  margin-top: 4px;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+}
+
+.profile-header p {
+  margin-top: 6px;
+  color: #5e6575;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.profile-card {
+  background: #fff;
+  border: 1px solid #dfe4ef;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.profile-card h2 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.profile-card p {
+  color: #5a6273;
+  margin-top: 4px;
+}
+
+@media (max-width: 860px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

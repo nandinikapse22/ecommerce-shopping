@@ -1,0 +1,334 @@
+.recommended-items {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.recommended-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.recommended-header h2 {
+  font-size: 32px;
+  color: #2e2e2e;
+  margin-bottom: 8px;
+}
+
+.recommended-header p {
+  font-size: 16px;
+  color: #6b6b6b;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.tabs button {
+  border: none;
+  background: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #6b6b6b;
+  padding-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.tabs button:hover {
+  color: #c8a07a;
+}
+
+.tabs button.active {
+  color: #c8a07a;
+  border-bottom: 2px solid #c8a07a;
+}
+
+/* Grid */
+.recommended-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* Card */
+.product-card {
+  background-color: #f9f5ef;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  background-color: #fff;
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img img {
+  transform: scale(1.05);
+}
+
+.product-card h4 {
+  font-size: 16px;
+  color: #2e2e2e;
+  margin-bottom: 6px;
+}
+
+.price {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #c8a07a;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .recommended-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .recommended-items {
+    padding: 40px 15px;
+  }
+
+  .recommended-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .tabs {
+    gap: 20px;
+  }
+
+  .tabs button {
+    font-size: 14px;
+  }
+
+  .product-img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .recommended-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recommended-header h2 {
+    font-size: 24px;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+/* Zoom Modal */
+.zoom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.zoom-content {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 90%;
+  max-height: 90%;
+  position: relative;
+  cursor: default;
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.zoom-content img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.zoom-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #2e2e2e;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.zoom-close:hover {
+  color: #c8a07a;
+}
+
+.zoom-details {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.zoom-details h3 {
+  font-size: 20px;
+  color: #2e2e2e;
+  margin-bottom: 8px;
+}
+
+.zoom-details .price {
+  font-size: 22px;
+}
+
+/* Wishlist Button */
+.wishlist-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wishlist-btn svg {
+  width: 18px;
+  height: 18px;
+  color: #9ca3af;
+  transition: all 0.3s ease;
+}
+
+.wishlist-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.wishlist-btn:hover svg {
+  color: #c8a07a;
+}
+
+/* Active wishlist state - filled heart */
+.wishlist-btn.active svg {
+  color: #c8a07a;
+  fill: #c8a07a;
+  animation: heartPop 0.3s ease;
+}
+
+@keyframes heartPop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Product Card - Add relative positioning for wishlist button */
+.product-card {
+  position: relative;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+  width: 100%;
+  padding: 12px 20px;
+  margin-top: 12px;
+  background-color: #c8a07a;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #b8926a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(200, 160, 122, 0.3);
+}
+
+.add-to-cart-btn:disabled {
+  cursor: default;
+}
+
+/* Added state feedback */
+.add-to-cart-btn.added {
+  background-color: #4ade80;
+  animation: addedPulse 0.5s ease;
+}
+
+@keyframes addedPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Modal Cart Button */
+.modal-cart-btn {
+  margin-top: 15px;
+  width: auto;
+  padding: 14px 40px;
+}

@@ -1,0 +1,297 @@
+/* Hidden Gems Section - Premium Dark Theme */
+/* Background Gradient: Deep warm brown → Espresso → Subtle gold tint */
+
+.hidden-gems {
+  width: 100%;
+  height: 821px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #3D2B1F 0%, #4A3728 30%, #5C4033 60%, #3D2B1F 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* Subtle gold tint overlay */
+.hidden-gems::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at 30% 20%, rgba(200, 160, 122, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hidden-gems-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Left Side - Hero Image */
+.gems-hero {
+  position: relative;
+}
+
+.gems-hero-image {
+  position: relative;
+  width: 100%;
+  height: 680px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gems-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.6s ease;
+}
+
+.gems-hero-image:hover img {
+  transform: scale(1.05);
+}
+
+.gems-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+  transition: background 0.3s ease;
+}
+
+.gems-hero-image:hover .gems-hero-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+}
+
+.gems-hero-content {
+  color: #fff;
+}
+
+.gems-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 12px 0;
+  letter-spacing: 1px;
+}
+
+.gems-subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 24px 0;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.gems-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #C8A07A;
+  color: #2E2E2E;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gems-cta:hover {
+  background-color: #b8926a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(200, 160, 122, 0.3);
+}
+
+.gems-cta .arrow {
+  transition: transform 0.3s ease;
+}
+
+.gems-cta:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Right Side - Cards Grid */
+.gems-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.gem-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gem-card-image {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.gem-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gem-card:hover .gem-card-image img {
+  transform: scale(1.08);
+}
+
+.gem-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  transition: background 0.3s ease;
+}
+
+.gem-card:hover .gem-card-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.gem-card-label {
+  display: inline-block;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-left: 12px;
+}
+
+.gem-card-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 16px;
+  background-color: #C8A07A;
+  border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hidden-gems-container {
+    gap: 20px;
+  }
+
+  .gems-title {
+    font-size: 36px;
+  }
+
+  .gem-card-image {
+    height: 200px;
+  }
+
+  .gems-hero-image {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hidden-gems {
+    padding: 60px 15px;
+  }
+
+  .hidden-gems-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .gems-hero-image {
+    min-height: 350px;
+  }
+
+  .gems-hero-overlay {
+    padding: 30px;
+  }
+
+  .gems-title {
+    font-size: 32px;
+  }
+
+  .gems-subtitle {
+    font-size: 16px;
+  }
+
+  .gems-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .gem-card-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hidden-gems {
+    padding: 40px 15px;
+  }
+
+  .gems-hero-image {
+    min-height: 300px;
+  }
+
+  .gems-hero-overlay {
+    padding: 20px;
+  }
+
+  .gems-title {
+    font-size: 28px;
+  }
+
+  .gems-cta {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .gems-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .gem-card-image {
+    height: 150px;
+  }
+
+  .gem-card-label {
+    font-size: 14px;
+  }
+}

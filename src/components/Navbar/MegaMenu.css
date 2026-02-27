@@ -1,0 +1,117 @@
+/* Mega Menu Styles */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 100;
+  border-top: 1px solid #f0f0f0;
+}
+
+.mega-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mega-menu-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 40px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+
+/* Column */
+.mega-menu-column {
+  text-align: left;
+}
+
+.mega-menu-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2e2e2e;
+  margin: 0 0 16px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #C8A07A;
+  display: inline-block;
+}
+
+.mega-menu-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mega-menu-links li {
+  margin-bottom: 10px;
+}
+
+.mega-menu-links a {
+  color: #6b6b6b;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+  display: inline-block;
+}
+
+.mega-menu-links a:hover{
+  color: #C8A07A;
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .mega-menu-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 25px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mega-menu {
+    display: none;
+  }
+
+  .mobile-inline-mega .mega-menu {
+    display: block;
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-top: 8px;
+  }
+
+  .mobile-inline-mega .mega-menu-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .mobile-inline-mega .mega-menu-title {
+    font-size: 12px;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+  }
+
+  .mobile-inline-mega .mega-menu-links li {
+    margin-bottom: 6px;
+  }
+
+  .mobile-inline-mega .mega-menu-links a {
+    font-size: 13px;
+  }
+}

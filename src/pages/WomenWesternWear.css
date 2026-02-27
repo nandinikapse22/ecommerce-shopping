@@ -1,0 +1,36 @@
+.women-western-page {
+  background: #f7f8fb;
+  min-height: 100%;
+  padding-bottom: 44px;
+}
+
+.western-banner {
+  background: linear-gradient(120deg, #e8efff, #d8e2ff);
+  border-bottom: 1px solid #dce4f6;
+}
+
+.western-banner-content {
+  padding: 28px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.western-content-wrap {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding-top: 18px;
+}
+
+.western-main-content {
+  flex: 1;
+}
+
+@media (max-width: 900px) {
+  .western-content-wrap {
+    display: block;
+  }
+}
+

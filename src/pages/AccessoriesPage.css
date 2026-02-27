@@ -1,0 +1,69 @@
+.accessories-hub-page {
+  background: #f7f8fb;
+  min-height: 100%;
+  padding: 24px 0 48px;
+}
+
+.accessories-hub-header {
+  margin-bottom: 18px;
+}
+
+.accessories-breadcrumb {
+  color: #767d8b;
+  font-size: 0.86rem;
+}
+
+.accessories-hub-header h1 {
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  margin-top: 4px;
+}
+
+.accessories-hub-header p {
+  color: #5d6576;
+  margin-top: 6px;
+}
+
+.accessories-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.accessories-hub-card {
+  background: #fff;
+  border: 1px solid #dde3ef;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.accessories-hub-card h2 {
+  font-size: 1.05rem;
+}
+
+.accessories-hub-card p {
+  color: #5f6779;
+  margin-top: 6px;
+}
+
+.accessories-hub-link {
+  margin-top: 12px;
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 9px;
+  background: #212944;
+  color: #fff;
+  font-weight: 600;
+}
+
+@media (max-width: 980px) {
+  .accessories-hub-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .accessories-hub-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

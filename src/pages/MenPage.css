@@ -1,0 +1,36 @@
+.men-page {
+  background: #f7f8fb;
+  min-height: 100%;
+  padding-bottom: 44px;
+}
+
+.men-banner {
+  background: linear-gradient(120deg, #eef4ff, #e8eef8);
+  border-bottom: 1px solid #dbe2ef;
+}
+
+.men-banner-content {
+  padding: 28px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.men-content-wrap {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding-top: 18px;
+}
+
+.men-main-content {
+  flex: 1;
+}
+
+@media (max-width: 900px) {
+  .men-content-wrap {
+    display: block;
+  }
+}
+

@@ -1,0 +1,41 @@
+.pdp-size-block {
+  margin-top: 14px;
+}
+
+.pdp-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pdp-label-row p {
+  font-weight: 600;
+}
+
+.pdp-error {
+  color: #c72f2f;
+  font-size: 0.85rem;
+}
+
+.pdp-size-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.pdp-size-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #d2d7e2;
+  background: #fff;
+  font-weight: 600;
+}
+
+.pdp-size-btn.selected {
+  background: #222b45;
+  color: #fff;
+  border-color: #222b45;
+}
+

@@ -1,0 +1,25 @@
+.pdp-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pdp-stars {
+  color: #de8e09;
+  letter-spacing: 0.02em;
+}
+
+.pdp-rating-value {
+  font-weight: 600;
+  color: #222;
+}
+
+.pdp-review-count {
+  color: #6e6e6e;
+  font-size: 0.88rem;
+}
+
+.pdp-rating.sm .pdp-stars { font-size: 0.85rem; }
+.pdp-rating.md .pdp-stars { font-size: 1rem; }
+.pdp-rating.lg .pdp-stars { font-size: 1.12rem; }
+

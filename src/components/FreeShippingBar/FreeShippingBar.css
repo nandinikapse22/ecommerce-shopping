@@ -1,0 +1,37 @@
+.free-shipping-bar {
+  width: 100%;
+  background-color: #C8A07A; /* brown shade */
+  overflow: hidden;
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-content {
+  display: inline-flex;
+  gap: 60px;
+  animation: scroll-left 20s linear infinite;
+}
+
+.marquee-content span {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

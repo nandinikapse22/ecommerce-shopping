@@ -1,0 +1,36 @@
+.women-beauty-page {
+  background: #f7f8fb;
+  min-height: 100%;
+  padding-bottom: 44px;
+}
+
+.beauty-banner {
+  background: linear-gradient(120deg, #f7eefe, #e2ecff);
+  border-bottom: 1px solid #dde5f4;
+}
+
+.beauty-banner-content {
+  padding: 28px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.beauty-content-wrap {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding-top: 18px;
+}
+
+.beauty-main-content {
+  flex: 1;
+}
+
+@media (max-width: 900px) {
+  .beauty-content-wrap {
+    display: block;
+  }
+}
+

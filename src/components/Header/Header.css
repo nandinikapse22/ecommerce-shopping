@@ -1,0 +1,42 @@
+.header {
+  background: linear-gradient(135deg, #2E2E2E 0%, #1a1a1a 100%);
+  color: #ffffff;
+  padding: 12px 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-text {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.header-text i {
+  color: #C8A07A;
+}
+
+.header-text strong {
+  color: #C8A07A;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 0;
+    font-size: 12px;
+  }
+  
+  .header-text {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}
